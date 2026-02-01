@@ -6,6 +6,22 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Skip link (Accessibility) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
 /* Header */
 header {
   background-color: #1f3a5f;
@@ -16,6 +32,13 @@ header {
 nav {
   background-color: #2d5f8b;
   padding: 10px;
+  display: inline-block;
+  width: 80%;
+}
+
+/* Descendant selector: images inside nav */
+nav img {
+  width: 10%;
 }
 
 /* Main */
@@ -24,6 +47,9 @@ main {
   font-size: 18px;
   padding: 20px;
   min-height: 300px;
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 8px;
 }
 
 /* Footer */
@@ -32,13 +58,16 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: 40px;
 }
 
-/* Li */
+/* Li – commented as required */
+/*
 li {
   display: inline-block;
   width: 120px;
 }
+*/
 
 /* H1 */
 h1 {
@@ -50,9 +79,10 @@ h1 {
 /* P */
 p {
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
-/* Extra */
+/* Navigation list */
 ul {
   list-style: none;
   padding: 0;
@@ -64,26 +94,32 @@ a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
-/* Improve main content layout */
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 8px;
+  padding: 8px;
 }
 
-/* Improve paragraph readability */
-p {
-  font-size: 1.1rem;
-}
-
-/* Navigation hover effect */
 nav a:hover {
   background-color: #1f3a5f;
   border-radius: 4px;
 }
 
-/* Improve footer spacing */
-footer {
-  margin-top: 40px;
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-between;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+/* Descendant selector: images in grid */
+.grid img {
+  width: 100%;
+}
+
+/* Flex layout */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
